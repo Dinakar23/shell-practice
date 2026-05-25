@@ -1,9 +1,9 @@
 #!/bin/bash
 
-echo "enter your username :"
-read USER_NAME #here USER_NAME is variable , whatever you enter in the terminal it will store
-echo "username is $USER_NAME"
+echo "Enter your username :"
+read USERNAME # It is variable , which is used to store whatever you entered in the terminal
+echo "Your username is : $USERNAME"
 
-echo "enter your password :"
-read -s PASSWD 
-echo $PASSWD
+echo "Enter your password :"
+read -s PASSWD # It will store password
+echo "Your Pawssword is : $PASSWD" # I print this for testing purpose
