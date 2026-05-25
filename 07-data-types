@@ -2,8 +2,8 @@
 number1=10
 number2=20
 
-sum=$((number1+number2))
-echo "sum of numbers is : $sum"
+#sum=$((number1+number2))
+echo "sum of numbers is : $((number1+number2))"
 
 #ARRAY
 MOVIES=("JAI BHIM" "VAKEELSAAB" "COURT") # INDEX always start from 0    
