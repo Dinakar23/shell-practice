@@ -4,3 +4,10 @@ number2=20
 
 sum=$((number1+number2))
 echo "sum of numbers is : $sum"
+
+#ARRAY
+MOVIES=("JAI BHIM" "VAKEELSAAB" "COURT") # INDEX always start from 0    
+echo "movies are : {$MOVIES[@]}"
+echo "movies are : {$MOVIES[$0]}"
+echo "movies are : {$MOVIES[$1]}"
+echo "movies are : {$MOVIES[$2]}"
