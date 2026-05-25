@@ -10,7 +10,7 @@ fi
 # echo "I'm continuing ..." 
 dnf list installed mysql # here we are cheking the Mysql is installed or not
 
-if [ $? -ne 0 ] ; then # if the process is not equal to 0 , It means already installed
+if [ $? -eq 0 ] ; then # if the process is not equal to 0 , It means already installed
     echo "Mysql is already installed ... SKIPPING"
 else # If the process is 0 , Now it will Install the Mysql
     echo "Installing MySql"
