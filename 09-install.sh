@@ -6,4 +6,10 @@ if [ "$USERID" -ne 0 ]; then
     exit 1
 fi
 
+# echo "I'm continuing ..." 
+
+echo "Installing MySql"
+dnf install mysqlfdfs -y
+
 echo "I'm continuing ..." 
+echo "I'm still continuing ..." 
