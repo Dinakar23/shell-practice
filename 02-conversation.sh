@@ -1,5 +1,5 @@
 #!bin/bash
-person1= Trumph
+person1=Trumph
 person2=Iran
 
 echo "$person1 : Hey, $person2 we are hoing to blast you"
