@@ -10,9 +10,9 @@ fi
 # echo "I'm continuing ..." 
 
 echo "Installing MySql"
-dnf install mysqlfdfs -y
+dnf install mysql -y
 
-if [ "$USERID" -ne 0 ]; then
+if [ $? -ne 0 ]; then
     echo "Installing MySql is FAILED ..."
 else
     echo "Installing MySql is SUCCESS ..."
