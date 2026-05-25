@@ -7,7 +7,7 @@ echo "sum of numbers is : $sum"
 
 #ARRAY
 MOVIES=("JAI BHIM" "VAKEELSAAB" "COURT") # INDEX always start from 0    
-echo "movies are    : ${MOVIES[@]}"
-echo "1st movie is  : ${MOVIES[0]}"
-echo "2nd movies is : ${MOVIES[1]}"
-echo "3rd movies is : ${MOVIES[2]}"
+echo "All movie names are : ${MOVIES[@]}"
+echo "1st Movies name :${MOVIES[0]}"
+echo "2nd movie name  :${MOVIES[1]}"
+echo "3rd movie name  :${MOVIES[2]}"
