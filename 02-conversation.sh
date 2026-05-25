@@ -1,6 +1,6 @@
 #!bin/bash
-person1=Trumph
-person2=Iran
+person1=Russia
+person2=Ukaraine
 
 echo "$person1 : Hey, $person2 we are hoing to blast you"
 echo "$person2   : You're Welcom Trumph "
