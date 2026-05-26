@@ -3,8 +3,8 @@
 USERID=$(id -u)
 echo "$USERID"
 
-if [ $? -ne 0 ]; then
-    echo "Please run this command with root access ..."
+if [ "$USERID" -ne 0 ]; then
+    echo "Please run this script with root access ..."
     exit 1
 fi
 
