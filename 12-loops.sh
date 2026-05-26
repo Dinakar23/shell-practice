@@ -4,7 +4,7 @@ USERID=$(id -u)
 
 LOGS_DIR=/var/log/shell-script
 
-LOGS_FILE="$LOGS_DIR/$(basename $0).log"
+LOGS_FILE="$LOGS_DIR/$0.log"
 
 TIMESTAMP=$(date "+%Y-%m-%d %H:%M:%S")
 
