@@ -1,5 +1,5 @@
 USERID=$(id -u)
-LOGS_DIR=/home/ec2-user/shell-logs
+LOGS_DIR=/var/log/shell-script
 LOGS_FILE="$LOGS_DIR/$0.log" #/home/ec2-user/shell-logs/11-install_Pract.sh.log
 if [ "$USERID" -ne 0 ]; then
     echon "Please run this command with root access ..."
