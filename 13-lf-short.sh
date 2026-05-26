@@ -18,18 +18,18 @@ fi
 
 VALIDATE(){
         if [ $2 -ne 0 ]; then
-        echo " $TIMESTAMP [ERROR] Installing $1 Failed ..."         | tee -a $LOGS_FILE
+        echo " Installing $1 is Failed ..."         
 
         else
-            echo " $TIMESTAMP [INFO] Installed $1 Successfully ..."| tee -a $LOGS_FILE
-        fi        
+            echo " Installed $1  Successfully ..."
+        fi
 
 }
 
 
 for package in $@ 
 do 
-    echo "Installing Package"
+    echo "Installing $Package"
 
 
 done
