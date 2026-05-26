@@ -22,7 +22,7 @@ if [ $? -eq 0 ]; then
 else 
     echo "installing Mysql"
     dnf install mysql -y &>> $LOGS_FILE
-    VALIDATE MySql $!
+    VALIDATE MySql $?
 fi
 
 dnf list installed nginx &>> $LOGS_FILE
@@ -31,5 +31,5 @@ if [ $? -eq 0 ]; then
 else 
     echo "installing nginx"
     dnf install nginx -y &>> $LOGS_FILE
-    VALIDATE nginx $!
+    VALIDATE nginx $?
 fi
