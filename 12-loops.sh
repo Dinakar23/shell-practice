@@ -14,18 +14,18 @@ fi
 
 VALIDATE(){
     if [ $2 -ne 0 ]; then
-        echo "Installing $1 Failed ...." | tee -a $LOGS_FILE
+        echo "Installing $1 Failed ...." 
         exit 1
     else
-        echo "Installed $1 SUCCESSFULLY" | tee -a $LOGS_FILE
+        echo "Installed $1 SUCCESSFULLY" 
     fi
 
 }
 
 for package in $@
 do
-    echo "installing $package package
-    dnf list installed $package
+    echo "installing $package package 
+    dnf list installed $package &>> $LOGS_FILE
     if [ $? -ne 0 ]; then
         dnf install $package  -y &>> $LOGS_FILE
         VALIDATE "Installing $package" $?
