@@ -10,7 +10,7 @@ fi
 
 dnf list installed mysql
 
-if [ $? -eq o ]; then
+if [ $? -eq 0 ]; then
     echo "Mysql is already installed !!!"
 
 else
