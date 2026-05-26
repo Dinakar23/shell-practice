@@ -18,10 +18,10 @@ fi
 
 VALIDATE(){
         if [ $2 -ne 0 ]; then
-        echo " Installing $1 is Failed ..."         
+        echo " $TIMESTAMP [ERROR] Installing $1 is Failed ..."         | tee -a $LOGS_FILE
 
         else
-            echo " Installed $1  Successfully ..."
+            echo " $TIMESTAMP [INFO] Installed $1  Successfully ..."    | tee -a $LOGS_FILE
         fi
 
 }
@@ -32,7 +32,7 @@ do
     echo "Installing $package "
     dnf list instlled $package
     if [ $? -ne 0 ]; then
-        dnf install $package -y
+        dnf install $package -y &>> $LOGS_FILE
         VALIDATE " installing $package " $?
     else
         echo "$package already installed ... SKIPPING"
