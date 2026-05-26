@@ -5,18 +5,28 @@ if [ "$USERID" -ne 0 ]; then
     exit 1
 fi
 
-dnf list installed mysql
+VALIDATE(){
+    if [ $2 -eq 0 ]; then
+        echo "Installing $1 Failed ...."
+    else
+        echo "Installed $1 SUCCESSFULLY"
+    fi
 
+}
+dnf list installed mysql
 if [ $? -eq 0 ]; then
     echo "Its already installed ... SKIPPING"
-    exit 1
 else 
     echo "installing Mysql"
     dnf install mysql -y
+    VALIDATE MySql $2
+fi
 
-    if [ $? -ne 0 ]; then
-        echo "Installing Failed ...."
-    else
-        echo "Installed  SUCCESSFULLY"
-    fi
+dnf list installed nginx
+if [ $? -eq 0 ]; then
+    echo "$1 already installed ... SKIPPING"
+else 
+    echo "installing $1"
+    dnf install $1 -y
+    VALIDATE nginx $2
 fi
