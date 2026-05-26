@@ -8,10 +8,10 @@ fi
 
 VALIDATE(){
     if [ $2 -ne 0 ]; then
-        echo "Installing $1 Failed ...."
+        echo "Installing $1 Failed ...." | tee -a $LOGS_FILE
         exit 1
     else
-        echo "Installed $1 SUCCESSFULLY"
+        echo "Installed $1 SUCCESSFULLY" | tee -a $LOGS_FILE
     fi
 
 }
