@@ -33,9 +33,9 @@ do
     dnf list instlled $package
     if [ $? -ne 0 ]; then
         dnf install $package -y &>> $LOGS_FILE
-        VALIDATE " $TIMESTAMP installing $package " $?
+        VALIDATE " $TIMESTAMP [INFO] installing $package " $?
     else
-        echo " $TIMESTAMP $package already installed ... SKIPPING"
+        echo " $TIMESTAMP [INFO] $package already installed ... SKIPPING"
 
     fi
 done
