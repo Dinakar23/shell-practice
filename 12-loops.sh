@@ -31,6 +31,9 @@ else
     
 fi
 
+
+dnf list installed nginx
+
 if [ $? -eq 0 ]; then
     echo "Nginx is already installed..."
 
