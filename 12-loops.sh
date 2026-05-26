@@ -1,7 +1,7 @@
 #!/bin/bash
 
 USERID=$(id -u)
-echo "$USERID"
+#echo "$USERID" Checking whether it is printing 0 or not , Don't need to pring
 
 if [ "$USERID" -ne 0 ]; then
     echo "Please run this script with root access ..."
@@ -10,10 +10,10 @@ fi
 
 VALIDATE(){
         if [ $? -ne 0 ]; then
-        echo "Installing Failed ..."
+        echo "Installing $1 Failed ..."
 
         else
-            echo "Installed Successfully ..."
+            echo "Installed $1 Successfully ..."
         fi        
 
 
