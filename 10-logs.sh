@@ -14,7 +14,7 @@ fi
 # second arg -> exit code
 
 VALIDATE(){
-    if [ $2 -ne 0 ]; then
+    if [ $2 -eq 0 ]; then
         echo "Installing $1 is FAILED ..."
     else
         echo "Installing $1 is SUCCESS ..."
@@ -23,6 +23,7 @@ VALIDATE(){
 }
 
 # echo "I'm continuing ..." 
+
 dnf list installed mysql &>> $LOGS_FILE  # here we are cheking the Mysql is installed or not
 if [ $? -eq 0 ] ; then # if the process is not equal to 0 , It means already installed
     echo "Mysql is already installed ... SKIPPING"
@@ -35,7 +36,7 @@ fi
 
 dnf list installed nginx &>> $LOGS_FILE # here we are cheking the Mysql is installed or not
 if [ $? -eq 0 ] ; then # if the process is not equal to 0 , It means already installed
-    echo "Mysql is already installed ... SKIPPING"
+    echo "Nginx is already installed ... SKIPPING"
 else # If the process is 0 , Now it will Install the Mysql
     echo "Installing nginx"
     dnf install nginx -y &>> $LOGS_FILE
