@@ -27,5 +27,6 @@ fi
  do
     echo " File to be deleted : $LINE"
     rm -f $LINE
+    echo "$LINE Deleted"
 
  done <<< "$FILES"
