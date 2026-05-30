@@ -23,8 +23,9 @@ if [ -z "$FILES" ]; then
     exit 0
 fi
  
- while IFS= read -r FILE
+ while IFS= read -r LINE
  do
-    echo " File to be deleted : $FILE"
+    echo " File to be deleted : $LINE"
+    rm -f $LINE
 
  done <<< "$FILES"
