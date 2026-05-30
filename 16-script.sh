@@ -1,6 +1,7 @@
 #!/bom/bash
 
 COUNTRY=INDIA
+
 echo "Country name is : $COUNTRY"
 echo "Process Id of script-1 : $$"
 
