@@ -43,10 +43,10 @@ echo "Archive created successfully: $ARCHIVE_FILE"
 if  [ $? -eq 0]; then
     echo "Arcieve is success, deleting the files"
     while IFS= read -r FILE
-    DO
+    do
         rm -f $FILE
         echo "Deleted file : $FILE"
-    DONE <<< "$FILES"
+    done <<< "$FILES"
 else
     echo " ERROR :: Archieval is Failed "
     exit 1
