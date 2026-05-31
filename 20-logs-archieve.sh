@@ -34,7 +34,8 @@ do
     echo "$FILE"
 done <<< "$FILES"
 
-TIMESTAMP=$(date "+%Y-%m-%d %H:%M:%S")
-ARCHIEVE_FILE="$$DEST_DIR/logs-archieve-$TIMESTAMP.tar.gz"
+TIMESTAMP=$(date "+%Y-%m-%d-%H-%M-%S")
+ARCHIVE_FILE="$DEST_DIR/logs-archieve-$TIMESTAMP.tar.gz"
 
-tar -czvf $ARCHIEVE_FILE $FILES
+tar -czvf "$ARCHIVE_FILE" $FILES
+echo "Archive created successfully: $ARCHIVE_FILE"
