@@ -2,13 +2,14 @@
 
 SOURCE_DIR=$1
 DEST_DIR=$2
-DAYS=${2:-14}
+DAYS=${3:-14}
 
-if [ -z "$SOURCE_DIR" ] || [ -z "$DEST_DIR" ]
+if [ -z "$SOURCE_DIR" ] || [ -z "$DEST_DIR" ]; then
     echo "Either source directory or destination directory empty"
     echo "USAGE :: $0 [source_fir] [dest_dir] [days:default 14]"
     exit 0
 fi
+
 if [ -d "$SOURCE_DIR" ]; then
     echo "Directory exists."
 else
