@@ -40,7 +40,7 @@ ARCHIVE_FILE="$DEST_DIR/logs-archieve-$TIMESTAMP.tar.gz"
 tar -czvf "$ARCHIVE_FILE" $FILES
 echo "Archive created successfully: $ARCHIVE_FILE"
 
-if  [ $? -eq 0]; then
+if  [ $? -eq 0 ]; then
     echo "Arcieve is success, deleting the files"
     while IFS= read -r FILE
     do
