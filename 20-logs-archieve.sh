@@ -22,10 +22,10 @@ else
     echo "Directory does NOT exist."
 fi
 
-FILES=$(find "$SOURCE_DIR" -type f -name "*.log" -mtime +$DAYS)
+FILES=$( find "$SOURCE_DIR" -type f -name "*.log" -mtime +$DAYS)
 
 if [ -z "$FILES" ]; then
-    echo "Files older than 14 days not found , nothing to do"
+    echo "Log Files older than 14 days not found , nothing to do"
     exit 0
 fi
 
